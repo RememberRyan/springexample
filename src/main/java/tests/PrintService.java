@@ -17,10 +17,14 @@ import org.springframework.stereotype.Service;
 public class PrintService {
 
     // Imagine additional dependency, 'test printer'
-    @Autowired
+    //@Autowired
     TestPrinter testPrinter;
+
+    //@Autowired
+    SuperTestPrinter superTestPrinter;
 
     public void printHello() {
         testPrinter.printSomethingElse();
+        superTestPrinter.printSomethingSuper();
     }
 }

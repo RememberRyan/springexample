@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
  */
 
 
-@Component
 public class TestPrinter {
     public void printSomethingElse() {
         System.out.println("Something else");
