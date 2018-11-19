@@ -1,5 +1,6 @@
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import tests.PrintService;
 import tests.TestPrinter;
 
 /**
@@ -11,8 +12,12 @@ public class MainXML {
         AbstractApplicationContext context
                 = new ClassPathXmlApplicationContext("application.xml");
 
-        TestPrinter testPrinter= (TestPrinter) context.getBean("testPrinter");
-        testPrinter.printSomethingElse();
+//        TestPrinter testPrinter= (TestPrinter) context.getBean("testPrinter");
+//        testPrinter.printSomethingElse();
+//        context.close();
+
+        PrintService printService= (PrintService) context.getBean("printService");
+        printService.printHello();
         context.close();
     }
 }

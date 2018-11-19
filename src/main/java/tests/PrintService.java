@@ -16,6 +16,22 @@ import org.springframework.stereotype.Service;
 
 public class PrintService {
 
+    public TestPrinter getTestPrinter() {
+        return testPrinter;
+    }
+
+    public void setTestPrinter(TestPrinter testPrinter) {
+        this.testPrinter = testPrinter;
+    }
+
+    public SuperTestPrinter getSuperTestPrinter() {
+        return superTestPrinter;
+    }
+
+    public void setSuperTestPrinter(SuperTestPrinter superTestPrinter) {
+        this.superTestPrinter = superTestPrinter;
+    }
+
     // Imagine additional dependency, 'test printer'
     //@Autowired
     TestPrinter testPrinter;

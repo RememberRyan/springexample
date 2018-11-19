@@ -4,6 +4,10 @@
 
 
     <!--defining our Bean in XML-->
-    <bean class="tests.TestPrinter" id="testPrinter" />
-
+    <bean class="tests.TestPrinter" id="testPrinter"/>
+    <bean class="tests.PrintService" id="printService">
+        <property name="testPrinter" ref="testPrinter"/>
+        <property name="superTestPrinter" ref="superTestPrinter"/>
+    </bean>
+    <bean class="tests.SuperTestPrinter" id="superTestPrinter"/>
 </beans>
